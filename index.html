@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok Manager</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="#accounts"><i class="fas fa-users"></i> Accounts</a></li>
+                    <li><a href="#analytics"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                    <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-actions">
+                    <button class="add-account-btn">
+                        <i class="fas fa-plus"></i> Add Account
+                    </button>
+                    <div class="user-profile">
+                        <img src="https://via.placeholder.com/40" alt="User Profile">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Account Management Section -->
+                <section class="accounts-section">
+                    <h2>Connected Accounts</h2>
+                    <div class="accounts-grid">
+                        <!-- Account cards will be dynamically added here -->
+                        <div class="account-card empty-state">
+                            <div class="add-account-placeholder">
+                                <i class="fas fa-plus-circle"></i>
+                                <p>Add your first TikTok account</p>
+                                <button class="connect-btn">Connect Account</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TikTok Login Modal -->
+                <div class="modal" id="tiktok-login-modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Connect TikTok Account</h3>
+                            <button class="close-modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="login-container">
+                                <div class="tiktok-login-frame">
+                                    <!-- TikTok OAuth iframe will be loaded here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
